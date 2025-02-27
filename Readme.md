@@ -8,13 +8,10 @@ This project implements an advanced emotion recognition system using Electroence
 
 - [Features](#features)
 - [Installation](#installation)
-- [Usage](#usage)
 - [Data](#data)
 - [Model Architecture](#model-architecture)
-- [Results](#results)
 - [Future Work](#future-work)
 - [Contributing](#contributing)
-- [License](#license)
 
 ## Features
 
@@ -86,8 +83,3 @@ We welcome contributions to improve the project. Please follow these steps:
 3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
