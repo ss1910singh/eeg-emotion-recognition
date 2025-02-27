@@ -32,7 +32,7 @@ cd eeg-emotion-recognition
 pip install -r requirements.txt
 ```
 
-## Usage
+<!-- ## Usage
 
 To train the model:
 
@@ -50,7 +50,7 @@ For real-time emotion classification:
 
 ```bash
 python realtime_classify.py --model_path /path/to/saved/model
-```
+``` -->
 
 ## Data
 
