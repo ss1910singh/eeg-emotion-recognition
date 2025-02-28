@@ -1,3 +1,5 @@
+# Hello there peeps 👋🏻, Journey Begins!!!
+
 # EEG-Based Emotion Recognition Using Deep Learning
 
 ## Overview
@@ -6,20 +8,20 @@ This project implements an advanced emotion recognition system using Electroence
 
 ## Table of Contents
 
-- [Features](#features)
-- [Installation](#installation)
-- [Data](#data)
-- [Model Architecture](#model-architecture)
-- [Future Work](#future-work)
-- [Contributing](#contributing)
+-   [Features](#features)
+-   [Installation](#installation)
+-   [Data](#data)
+-   [Model Architecture](#model-architecture)
+-   [Future Work](#future-work)
+-   [Contributing](#contributing)
 
 ## Features
 
-- EEG signal preprocessing and feature extraction
-- Implementation of LSTM, GRU, and DNN models for emotion classification
-- High accuracy emotion recognition (target: 98.44%+)
-- Support for multiple EEG datasets (e.g., DEAP, SEED)
-- Real-time emotion classification capabilities
+-   EEG signal preprocessing and feature extraction
+-   Implementation of LSTM, GRU, and DNN models for emotion classification
+-   High accuracy emotion recognition (target: 98.44%+)
+-   Support for multiple EEG datasets (e.g., DEAP, SEED)
+-   Real-time emotion classification capabilities
 
 ## Installation
 
@@ -53,8 +55,8 @@ python realtime_classify.py --model_path /path/to/saved/model
 
 This project supports various EEG datasets, including:
 
-- DEAP (Database for Emotion Analysis using Physiological Signals)
-- SEED (SJTU Emotion EEG Dataset)
+-   DEAP (Database for Emotion Analysis using Physiological Signals)
+-   SEED (SJTU Emotion EEG Dataset)
 
 Ensure your data is in the correct format and update the `config.py` file with the appropriate data paths.
 
@@ -70,9 +72,9 @@ These models are designed to capture temporal dependencies in EEG signals and ex
 
 ## Future Work
 
-- Implement multimodal emotion recognition by incorporating other physiological signals
-- Explore transfer learning techniques for improved generalization
-- Develop a user-friendly GUI for real-time emotion monitoring
+-   Implement multimodal emotion recognition by incorporating other physiological signals
+-   Explore transfer learning techniques for improved generalization
+-   Develop a user-friendly GUI for real-time emotion monitoring
 
 ## Contributing
 
