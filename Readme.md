@@ -3,7 +3,7 @@
 
 ## Overview
 
-This project implements an advanced emotion recognition system using Electroencephalography (EEG) data and deep learning techniques. By leveraging Long Short-Term Memory (LSTM), Gated Recurrent Unit (GRU), and Deep Neural Network (DNN) models, we have achieved high accuracy in classifying emotions, with our LSTM model reaching 97.50% accuracy on the test set.
+This project implements an advanced emotion recognition system using Electroencephalography (EEG) data and deep learning techniques. By leveraging Long Short-Term Memory (LSTM), Gated Recurrent Unit (GRU), and Deep Neural Network (DNN) models, we can achieve high accuracy in classifying emotions.
 
 ## Table of Contents
 
@@ -23,7 +23,7 @@ This project implements an advanced emotion recognition system using Electroence
 
 - EEG signal preprocessing and feature extraction
 - Implementation of LSTM, GRU, and DNN models for emotion classification
-- High accuracy emotion recognition (LSTM: 97.50%, GRU: 97.19%)
+- High accuracy emotion recognition
 - Support for multiple EEG datasets (e.g., DEAP, SEED)
 - Comprehensive data visualization and model performance analysis
 - Real-time emotion classification capabilities
