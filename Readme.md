@@ -137,8 +137,8 @@ python src/evaluate.py --model_path models/best_lstm_model.h5 --test_data data/p
 ## Results
 
 Current model performance:
-- LSTM: 97.50% accuracy on test set
-- GRU: 97.19% accuracy on test set
+- LSTM: Results pending
+- GRU: Results pending
 - DNN: Results pending
 
 Detailed performance metrics, confusion matrices, and visualizations are generated for each model.
