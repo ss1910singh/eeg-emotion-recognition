@@ -44,12 +44,19 @@ def main():
     X_train_selected, X_val_selected, X_test_selected = select_features(X_train_scaled, y_train, X_val_scaled, X_test_scaled)
     
     print("Data Preprocessing Complete.")
-    np.save('../Data/processed/X_train_selected.npy', X_train_selected)
-    np.save('../Data/processed/X_val_selected.npy', X_val_selected)
-    np.save('../Data/processed/X_test_selected.npy', X_test_selected)
-    np.save('../Data/processed/y_train.npy', y_train)
-    np.save('../Data/processed/y_val.npy', y_val)
-    np.save('../Data/processed/y_test.npy', y_test)
+    np.save('../Data/processed/npy/X_train_selected.npy', X_train_selected)
+    np.save('../Data/processed/npy/X_val_selected.npy', X_val_selected)
+    np.save('../Data/processed/npy/X_test_selected.npy', X_test_selected)
+    np.save('../Data/processed/npy/y_train.npy', y_train)
+    np.save('../Data/processed/npy/y_val.npy', y_val)
+    np.save('../Data/processed/npy/y_test.npy', y_test)
+
+    pd.DataFrame(X_train_selected).to_csv('../Data/processed/csv/X_train_selected.csv', index=False)
+    pd.DataFrame(X_val_selected).to_csv('../Data/processed/csv/X_val_selected.csv', index=False)
+    pd.DataFrame(X_test_selected).to_csv('../Data/processed/csv/X_test_selected.csv', index=False)
+    pd.DataFrame(y_train).to_csv('../Data/processed/csv/y_train.csv', index=False, header=['label'])
+    pd.DataFrame(y_val).to_csv('../Data/processed/csv/y_val.csv', index=False, header=['label'])
+    pd.DataFrame(y_test).to_csv('../Data/processed/csv/y_test.csv', index=False, header=['label'])
 
 if __name__ == "__main__":
     main()
