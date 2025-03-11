@@ -1,4 +1,3 @@
-#Adding basic libraries we going to use in our project, you can add more libraries as per your requirement.
 tensorflow
 numpy
 pandas
