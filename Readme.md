@@ -1,9 +1,8 @@
-
 # 🚀 EEG-Based Emotion Recognition Using Deep Learning
 
 ## Overview
 
-This project implements an advanced emotion recognition system using Electroencephalography (EEG) data and deep learning techniques. By leveraging Long Short-Term Memory (LSTM), Gated Recurrent Unit (GRU), and Deep Neural Network (DNN) models, we can achieve high accuracy in classifying emotions.
+This project implements an advanced emotion recognition system using Electroencephalography (EEG) data and deep learning techniques. By leveraging Long Short-Term Memory (LSTM), Gated Recurrent Unit (GRU), Deep Neural Network (DNN), and Spiking Neural Network (SNN) models, we aim to achieve high accuracy in classifying emotions.
 
 ## Table of Contents
 
@@ -17,14 +16,14 @@ This project implements an advanced emotion recognition system using Electroence
 - [Training](#training)
 - [Evaluation](#evaluation)
 - [Results](#results)
-- [Future Work](#future-work)
-- [Contributing](#contributing)
+<!--- [Future Work](#future-work)-->
+<!--- [Contributing](#contributing)-->
 
 ## Features
 
 - **EEG Signal Preprocessing and Feature Extraction**: The project includes a comprehensive preprocessing pipeline to extract meaningful features from EEG signals.
-- **Implementation of LSTM, GRU, and DNN Models**: These models are used for emotion classification, providing a robust framework for handling temporal and spatial dependencies in EEG data.
-- **High Accuracy Emotion Recognition**: The system aims to achieve high accuracy in emotion classification, leveraging the strengths of deep learning models.
+- **Implementation of LSTM, GRU, DNN, and SNN Models**: These models are used for emotion classification, providing a robust framework for handling temporal and spatial dependencies in EEG data.
+- **High Accuracy Emotion Recognition**: The system aims to achieve high accuracy in emotion classification by leveraging the strengths of deep learning models.
 - **Support for Multiple EEG Datasets**: The project supports various EEG datasets, including DEAP and SEED, allowing for flexibility and generalizability across different datasets.
 - **Comprehensive Data Visualization and Model Performance Analysis**: Detailed visualizations and performance metrics are provided to understand model behavior and optimize performance.
 - **Real-time Emotion Classification Capabilities**: The system is designed to classify emotions in real-time, making it suitable for applications requiring immediate feedback.
@@ -48,8 +47,7 @@ eeg-emotion-recognition/
 │
 ├── data/
 │   ├── raw/
-│   │   ├── DEAP/
-│   │   └── SEED/
+│   │   ├── CSV
 │   └── processed/
 │
 ├── src/
@@ -58,7 +56,8 @@ eeg-emotion-recognition/
 │   │   ├── __init__.py
 │   │   ├── lstm.py
 │   │   ├── gru.py
-│   │   └── dnn.py
+│   │   ├── dnn.py
+│   │   └── snn.py
 │   └── evaluate.py
 │
 ├── notebooks/
@@ -113,7 +112,7 @@ Preprocessing scripts are located in `src/preprocessing/`.
 
 ## Model Architecture
 
-Our emotion recognition system employs three main deep learning architectures:
+Our emotion recognition system employs four main deep learning architectures:
 
 1. **LSTM (Long Short-Term Memory)**
    - 256 LSTM units with return sequences
@@ -129,6 +128,11 @@ Our emotion recognition system employs three main deep learning architectures:
    - Multiple Dense layers with ReLU activation
    - Batch Normalization and Dropout for regularization
    - Final Dense layer with softmax activation
+
+4. **SNN (Spiking Neural Network)**
+   - Leverages spiking neuron dynamics for temporal feature extraction.
+   - Uses surrogate gradient descent for training.
+   - Final Dense layer with softmax activation.
 
 Model implementations can be found in `src/models/`.
 
@@ -161,38 +165,22 @@ python src/evaluate.py --model_path models/best_lstm_model.h5 --test_data data/p
 ## Results
 
 Current model performance:
-- **LSTM**: Results pending
-- **GRU**: Results pending
-- **DNN**: Results pending
+- **LSTM**: Results pending  
+- **GRU**: Results pending  
+- **DNN**: Results pending  
+- **SNN**: Results pending  
 
 Detailed performance metrics, confusion matrices, and visualizations are generated for each model.
 
-## Future Work
+<!--## Future Work-->
 
-- **Multimodal Emotion Recognition**: Incorporate other physiological signals (e.g., ECG, GSR).
-- **Transfer Learning**: Explore techniques for improved generalization across datasets.
-- **Real-time GUI**: Develop a user-friendly interface for real-time emotion monitoring.
-- **Attention Mechanisms**: Improve model interpretability.
-- **Ensemble Methods**: Combine predictions from multiple models.
-- **Edge Deployment**: Optimize models for edge devices (e.g., TensorFlow Lite conversion).
-- **Hybrid Architectures**: Explore CNN-LSTM or Graph CNN with LSTM for improved performance.
-- **Graph CNN with LSTM**: Leverage graph domain features.
-- **STRNN (Spatial-Temporal Recurrent Neural Network)**: Integrated feature learning.
-
-## Contributing
-
-We welcome contributions to improve the project. Please follow these steps:
-
-1. **Fork the repository**
-2. **Create a new branch** (`git checkout -b feature/AmazingFeature`)
-3. **Commit your changes** (`git commit -m 'Add some AmazingFeature'`)
-4. **Push to the branch** (`git push origin feature/AmazingFeature`)
-5. **Open a Pull Request**
-
-### Contributions to Decrease Computation
-
-- **Model Pruning**: Remove redundant weights to reduce model size.
-- **Knowledge Distillation**: Train smaller models to mimic larger ones.
-- **Quantization**: Reduce precision of model weights and activations.
-- **Efficient Architectures**: Explore lightweight models like MobileNet or ShuffleNet.
-- **Parallel Processing**: Utilize multi-core CPUs or GPUs for faster training.
+<!--Planned improvements include:-->
+  
+<!--1. Multimodal Emotion Recognition  -->
+<!--2. Transfer Learning  -->
+<!--3. Real-time GUI Development  -->
+<!--4. Attention Mechanisms  -->
+<!--5. Ensemble Methods  -->
+<!--6. Edge Deployment  -->
+<!--7. Hybrid Architectures like CNN-LSTM or Graph CNN-LSTM  -->
+<!--8. Exploration of STRNN (Spatial Temporal Recurrent Neural Network).  -->
