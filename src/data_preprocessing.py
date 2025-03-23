@@ -42,6 +42,10 @@ def preprocess_data(file_path, k=2549):
     X_val_selected = X_val_selected.reshape((X_val_selected.shape[0], X_val_selected.shape[1], 1))
     X_test_selected = X_test_selected.reshape((X_test_selected.shape[0], X_test_selected.shape[1], 1))
 
+    y_train = pd.get_dummies(y_train)
+    y_test = pd.get_dummies(y_test)
+    y_val = pd.get_dummies(y_val)
+
     X_train_df = pd.DataFrame(X_train_selected.reshape(X_train_selected.shape[0], X_train_selected.shape[1]))
     X_val_df = pd.DataFrame(X_val_selected.reshape(X_val_selected.shape[0], X_val_selected.shape[1]))
     X_test_df = pd.DataFrame(X_test_selected.reshape(X_test_selected.shape[0], X_test_selected.shape[1]))
