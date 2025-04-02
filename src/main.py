@@ -4,7 +4,7 @@ import os
 from data_preprocessing import preprocess_data
 
 file_path = '../Data/raw/emotions.csv'
-(X_train, X_val, X_test, y_train, y_val, y_test, X_train_df, X_val_df, X_test_df, y_train_df, y_val_df, y_test_df) = preprocess_data(file_path)
+(X_train, X_val, X_test, y_train, y_val, y_test, X_train_df, X_val_df, X_test_df, y_train_df, y_val_df, y_test_df) = preprocess_data(file_path,200)
 
 npy_dir = '../Data/processed/npy'
 csv_dir = '../Data/processed/csv'

@@ -23,39 +23,38 @@ def scale_features(X_train, X_val, X_test):
     X_test_scaled = scaler.transform(X_test)
     return X_train_scaled, X_val_scaled, X_test_scaled
 
-def select_features(X_train_scaled, y_train, X_val_scaled, X_test_scaled, k=2549):
-    selector = SelectKBest(mutual_info_classif, k=k)
+def select_features(X_train_scaled, y_train, X_val_scaled, X_test_scaled, k):
+    selector = SelectKBest(mutual_info_classif, k=min(k, X_train_scaled.shape[1]))
     X_train_selected = selector.fit_transform(X_train_scaled, y_train)
     X_val_selected = selector.transform(X_val_scaled)
     X_test_selected = selector.transform(X_test_scaled)
     return X_train_selected, X_val_selected, X_test_selected
 
-def preprocess_data(file_path, k=2549):
+def preprocess_data(file_path, k=200):
     df = pd.read_csv(file_path)
     df = encode_labels(df)
     
     X_train, X_val, X_test, y_train, y_val, y_test = split_data(df)
     X_train_scaled, X_val_scaled, X_test_scaled = scale_features(X_train, X_val, X_test)
     X_train_selected, X_val_selected, X_test_selected = select_features(X_train_scaled, y_train, X_val_scaled, X_test_scaled, k)
-
+    
     X_train_selected = X_train_selected.reshape((X_train_selected.shape[0], X_train_selected.shape[1], 1))
     X_val_selected = X_val_selected.reshape((X_val_selected.shape[0], X_val_selected.shape[1], 1))
     X_test_selected = X_test_selected.reshape((X_test_selected.shape[0], X_test_selected.shape[1], 1))
-
+    
     y_train = pd.get_dummies(y_train)
-    y_test = pd.get_dummies(y_test)
     y_val = pd.get_dummies(y_val)
-
+    y_test = pd.get_dummies(y_test)
+    
     X_train_df = pd.DataFrame(X_train_selected.reshape(X_train_selected.shape[0], X_train_selected.shape[1]))
     X_val_df = pd.DataFrame(X_val_selected.reshape(X_val_selected.shape[0], X_val_selected.shape[1]))
     X_test_df = pd.DataFrame(X_test_selected.reshape(X_test_selected.shape[0], X_test_selected.shape[1]))
-
+    
     return (
         X_train_selected, X_val_selected, X_test_selected, 
         y_train.to_numpy(), y_val.to_numpy(), y_test.to_numpy(),
         X_train_df, X_val_df, X_test_df, 
-        pd.DataFrame(y_train, columns=['label']), 
-        pd.DataFrame(y_val, columns=['label']), 
-        pd.DataFrame(y_test, columns=['label'])
+        pd.DataFrame(y_train, columns=y_train.columns), 
+        pd.DataFrame(y_val, columns=y_val.columns), 
+        pd.DataFrame(y_test, columns=y_test.columns)
     )
-
