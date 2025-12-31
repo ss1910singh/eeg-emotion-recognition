@@ -136,7 +136,3 @@ python src/evaluate.py --model_path models/best_lstm_model.h5 --test_data data/p
 * Real-time GUI for live EEG emotion detection.
 * Explore hybrid architectures like CNN-LSTM and STRNN for improved performance.
 * Edge deployment for wearable EEG devices.
-
-
-I can also make a **resume-friendly LaTeX entry** from this if you want, like we did for your other projects. Do you want me to do that next?
-```
